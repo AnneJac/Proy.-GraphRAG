@@ -1,0 +1,959 @@
+Folder PATH listing
+Volume serial number is FCDC-875D
+C:\PROJECTS\UDLA\AI\TITULACION\PROYECTO_GRAPHRAG_2\GRAPHPROP
+|   .env
+|   .env.example
+|   .gitignore
+|   app.py
+|   app_streamlit_preventa.py
+|   estructura_proyecto.txt
+|   graphprop_estructura.txt
+|   graph_pipeline.py
+|   main.py
+|   README.md
+|   requirements.txt
+|   
++---api
+|   |   main.py
+|   |   schemas.py
+|   |   services.py
+|   |   
+|   \---__pycache__
+|           main.cpython-313.pyc
+|           schemas.cpython-313.pyc
+|           services.cpython-313.pyc
+|           
++---config
+|   |   document.css
+|   |   settings.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           settings.cpython-313.pyc
+|           __init__.cpython-313.pyc
+|           
++---data
+|       .gitkeep
+|       seed.db
+|       
++---output
+|   |   .gitkeep
+|   |   
+|   +---Banco Andino de Crédito
+|   |   +---Plataforma de Inclusión Financiera
+|   |   |   \---RFP
+|   |   |           Plataforma de Inclusión Financiera_MEETING_MINUTES_20260318.pdf
+|   |   |           Plataforma de Inclusión Financiera_MEETING_MINUTES_20260318.xmp
+|   |   |           Plataforma de Inclusión Financiera_RFP_20260319.pdf
+|   |   |           Plataforma de Inclusión Financiera_RFP_20260319.xmp
+|   |   |           Plataforma de Inclusión Financiera_RFP_QA_20260318.pdf
+|   |   |           Plataforma de Inclusión Financiera_RFP_QA_20260318.xmp
+|   |   |           Plataforma de Inclusión Financiera_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Plataforma de Inclusión Financiera_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Plataforma de Inclusión Financiera_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Plataforma de Inclusión Financiera_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   +---Plataforma Integral de Atención Digital
+|   |   |   \---RFP
+|   |   |           Plataforma Integral de Atención Digital_MEETING_MINUTES_20260319.pdf
+|   |   |           Plataforma Integral de Atención Digital_MEETING_MINUTES_20260319.xmp
+|   |   |           Plataforma Integral de Atención Digital_RFP_20260319.pdf
+|   |   |           Plataforma Integral de Atención Digital_RFP_20260319.xmp
+|   |   |           Plataforma Integral de Atención Digital_RFP_QA_20260319.pdf
+|   |   |           Plataforma Integral de Atención Digital_RFP_QA_20260319.xmp
+|   |   |           Plataforma Integral de Atención Digital_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Plataforma Integral de Atención Digital_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Plataforma Integral de Atención Digital_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Plataforma Integral de Atención Digital_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   \---Sistema Avanzado de Scoring Crediticio con IA
+|   |       \---RFP
+|   |               Sistema Avanzado de Scoring Crediticio con IA_MEETING_MINUTES_20260319.pdf
+|   |               Sistema Avanzado de Scoring Crediticio con IA_MEETING_MINUTES_20260319.xmp
+|   |               Sistema Avanzado de Scoring Crediticio con IA_RFP_20260319.pdf
+|   |               Sistema Avanzado de Scoring Crediticio con IA_RFP_20260319.xmp
+|   |               Sistema Avanzado de Scoring Crediticio con IA_RFP_QA_20260319.pdf
+|   |               Sistema Avanzado de Scoring Crediticio con IA_RFP_QA_20260319.xmp
+|   |               Sistema Avanzado de Scoring Crediticio con IA_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |               Sistema Avanzado de Scoring Crediticio con IA_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |               Sistema Avanzado de Scoring Crediticio con IA_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |               Sistema Avanzado de Scoring Crediticio con IA_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |               
+|   +---Banco Horizonte Financiero
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos
+|   |   |   \---RFP
+|   |   +---Plataforma de Análisis Predictivo para Créditos
+|   |   |   \---RFP
+|   |   |           Plataforma de Análisis Predictivo para Créditos_MEETING_MINUTES_20260319.pdf
+|   |   |           Plataforma de Análisis Predictivo para Créditos_MEETING_MINUTES_20260319.xmp
+|   |   |           Plataforma de Análisis Predictivo para Créditos_RFP_20260319.pdf
+|   |   |           Plataforma de Análisis Predictivo para Créditos_RFP_20260319.xmp
+|   |   |           Plataforma de Análisis Predictivo para Créditos_RFP_QA_20260319.pdf
+|   |   |           Plataforma de Análisis Predictivo para Créditos_RFP_QA_20260319.xmp
+|   |   |           Plataforma de Análisis Predictivo para Créditos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Plataforma de Análisis Predictivo para Créditos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Plataforma de Análisis Predictivo para Créditos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Plataforma de Análisis Predictivo para Créditos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   +---Plataforma de Banca Digital Multicanal
+|   |   |   \---RFP
+|   |   |           Plataforma de Banca Digital Multicanal_MEETING_MINUTES_20260319.pdf
+|   |   |           Plataforma de Banca Digital Multicanal_MEETING_MINUTES_20260319.xmp
+|   |   |           Plataforma de Banca Digital Multicanal_RFP_20260319.pdf
+|   |   |           Plataforma de Banca Digital Multicanal_RFP_20260319.xmp
+|   |   |           Plataforma de Banca Digital Multicanal_RFP_QA_20260319.pdf
+|   |   |           Plataforma de Banca Digital Multicanal_RFP_QA_20260319.xmp
+|   |   |           Plataforma de Banca Digital Multicanal_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Plataforma de Banca Digital Multicanal_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Plataforma de Banca Digital Multicanal_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Plataforma de Banca Digital Multicanal_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   \---Sistema Predictivo de Detección de Fraudes
+|   |       \---RFP
+|   |               Sistema Predictivo de Detección de Fraudes_MEETING_MINUTES_20260319.pdf
+|   |               Sistema Predictivo de Detección de Fraudes_MEETING_MINUTES_20260319.xmp
+|   |               Sistema Predictivo de Detección de Fraudes_RFP_20260319.pdf
+|   |               Sistema Predictivo de Detección de Fraudes_RFP_20260319.xmp
+|   |               Sistema Predictivo de Detección de Fraudes_RFP_QA_20260319.pdf
+|   |               Sistema Predictivo de Detección de Fraudes_RFP_QA_20260319.xmp
+|   |               Sistema Predictivo de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |               Sistema Predictivo de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |               Sistema Predictivo de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |               Sistema Predictivo de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |               
+|   +---Banco Nueva Cordillera
+|   |   +---Expansión y Optimización de Canales Digitales
+|   |   |   \---RFP
+|   |   |           Expansión y Optimización de Canales Digitales_RFP_20260319.pdf
+|   |   |           Expansión y Optimización de Canales Digitales_RFP_20260319.xmp
+|   |   |           Expansión y Optimización de Canales Digitales_RFP_QA_20260319.pdf
+|   |   |           Expansión y Optimización de Canales Digitales_RFP_QA_20260319.xmp
+|   |   |           
+|   |   +---Plataforma de Financiamiento Sostenible
+|   |   |   \---RFP
+|   |   |           Plataforma de Financiamiento Sostenible_MEETING_MINUTES_20260319.pdf
+|   |   |           Plataforma de Financiamiento Sostenible_MEETING_MINUTES_20260319.xmp
+|   |   |           Plataforma de Financiamiento Sostenible_RFP_20260319.pdf
+|   |   |           Plataforma de Financiamiento Sostenible_RFP_20260319.xmp
+|   |   |           Plataforma de Financiamiento Sostenible_RFP_QA_20260319.pdf
+|   |   |           Plataforma de Financiamiento Sostenible_RFP_QA_20260319.xmp
+|   |   |           Plataforma de Financiamiento Sostenible_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Plataforma de Financiamiento Sostenible_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Plataforma de Financiamiento Sostenible_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Plataforma de Financiamiento Sostenible_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   +---Sistema Avanzado de Scoring Crediticio
+|   |   |   \---RFP
+|   |   |           Sistema Avanzado de Scoring Crediticio_MEETING_MINUTES_20260319.pdf
+|   |   |           Sistema Avanzado de Scoring Crediticio_MEETING_MINUTES_20260319.xmp
+|   |   |           Sistema Avanzado de Scoring Crediticio_RFP_20260319.pdf
+|   |   |           Sistema Avanzado de Scoring Crediticio_RFP_20260319.xmp
+|   |   |           Sistema Avanzado de Scoring Crediticio_RFP_QA_20260319.pdf
+|   |   |           Sistema Avanzado de Scoring Crediticio_RFP_QA_20260319.xmp
+|   |   |           Sistema Avanzado de Scoring Crediticio_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Sistema Avanzado de Scoring Crediticio_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Sistema Avanzado de Scoring Crediticio_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Sistema Avanzado de Scoring Crediticio_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   \---Sistema de Detección de Fraudes en Tiempo Real
+|   |       \---RFP
+|   |               Sistema de Detección de Fraudes en Tiempo Real_MEETING_MINUTES_20260319.pdf
+|   |               Sistema de Detección de Fraudes en Tiempo Real_MEETING_MINUTES_20260319.xmp
+|   |               Sistema de Detección de Fraudes en Tiempo Real_RFP_20260319.pdf
+|   |               Sistema de Detección de Fraudes en Tiempo Real_RFP_20260319.xmp
+|   |               Sistema de Detección de Fraudes en Tiempo Real_RFP_QA_20260319.pdf
+|   |               Sistema de Detección de Fraudes en Tiempo Real_RFP_QA_20260319.xmp
+|   |               Sistema de Detección de Fraudes en Tiempo Real_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |               Sistema de Detección de Fraudes en Tiempo Real_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |               Sistema de Detección de Fraudes en Tiempo Real_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |               Sistema de Detección de Fraudes en Tiempo Real_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |               
+|   +---Banco Nueva Esperanza
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos
+|   |   |   \---RFP
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_MEETING_MINUTES_20260319.pdf
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_MEETING_MINUTES_20260319.xmp
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_RFP_20260319.pdf
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_RFP_20260319.xmp
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_RFP_QA_20260319.pdf
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_RFP_QA_20260319.xmp
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Desarrollo de Plataforma Fintech para Microcréditos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   +---Integración de Canales Digitales y CRM Avanzado
+|   |   |   \---RFP
+|   |   |           Integración de Canales Digitales y CRM Avanzado_MEETING_MINUTES_20260319.pdf
+|   |   |           Integración de Canales Digitales y CRM Avanzado_MEETING_MINUTES_20260319.xmp
+|   |   |           Integración de Canales Digitales y CRM Avanzado_RFP_20260319.pdf
+|   |   |           Integración de Canales Digitales y CRM Avanzado_RFP_20260319.xmp
+|   |   |           Integración de Canales Digitales y CRM Avanzado_RFP_QA_20260319.pdf
+|   |   |           Integración de Canales Digitales y CRM Avanzado_RFP_QA_20260319.xmp
+|   |   |           Integración de Canales Digitales y CRM Avanzado_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Integración de Canales Digitales y CRM Avanzado_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Integración de Canales Digitales y CRM Avanzado_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Integración de Canales Digitales y CRM Avanzado_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   \---Sistema Avanzado de Detección de Fraudes
+|   |       \---RFP
+|   |               Sistema Avanzado de Detección de Fraudes_MEETING_MINUTES_20260319.pdf
+|   |               Sistema Avanzado de Detección de Fraudes_MEETING_MINUTES_20260319.xmp
+|   |               Sistema Avanzado de Detección de Fraudes_RFP_20260319.pdf
+|   |               Sistema Avanzado de Detección de Fraudes_RFP_20260319.xmp
+|   |               Sistema Avanzado de Detección de Fraudes_RFP_QA_20260319.pdf
+|   |               Sistema Avanzado de Detección de Fraudes_RFP_QA_20260319.xmp
+|   |               Sistema Avanzado de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |               Sistema Avanzado de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |               Sistema Avanzado de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |               Sistema Avanzado de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |               
+|   +---Banco Soluciones del Sur
+|   |   +---Automatización de Procesos Internos
+|   |   |   \---RFP
+|   |   |           Automatización de Procesos Internos_MEETING_MINUTES_20260319.pdf
+|   |   |           Automatización de Procesos Internos_MEETING_MINUTES_20260319.xmp
+|   |   |           Automatización de Procesos Internos_RFP_20260319.pdf
+|   |   |           Automatización de Procesos Internos_RFP_20260319.xmp
+|   |   |           Automatización de Procesos Internos_RFP_QA_20260319.pdf
+|   |   |           Automatización de Procesos Internos_RFP_QA_20260319.xmp
+|   |   |           Automatización de Procesos Internos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |   |           Automatización de Procesos Internos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |   |           Automatización de Procesos Internos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |   |           Automatización de Procesos Internos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |   |           
+|   |   +---Automatización de Procesos Internos y Reducción de Costos
+|   |   |   \---RFP
+|   |   |           Automatización de Procesos Internos y Reducción de Costos_MEETING_MINUTES_20260319.pdf
+|   |   |           Automatización de Procesos Internos y Reducción de Costos_MEETING_MINUTES_20260319.xmp
+|   |   |           Automatización de Procesos Internos y Reducción de Costos_RFP_20260319.pdf
+|   |   |           Automatización de Procesos Internos y Reducción de Costos_RFP_20260319.xmp
+|   |   |           Automatización de Procesos Internos y Reducción de Costos_RFP_QA_20260319.pdf
+|   |   |           Automatización de Procesos Internos y Reducción de Costos_RFP_QA_20260319.xmp
+|   |   |           
+|   |   \---Plataforma de Banca Móvil Inclusiva
+|   |       \---RFP
+|   |               Plataforma de Banca Móvil Inclusiva_MEETING_MINUTES_20260319.pdf
+|   |               Plataforma de Banca Móvil Inclusiva_MEETING_MINUTES_20260319.xmp
+|   |               Plataforma de Banca Móvil Inclusiva_RFP_20260319.pdf
+|   |               Plataforma de Banca Móvil Inclusiva_RFP_20260319.xmp
+|   |               Plataforma de Banca Móvil Inclusiva_RFP_QA_20260319.pdf
+|   |               Plataforma de Banca Móvil Inclusiva_RFP_QA_20260319.xmp
+|   |               Plataforma de Banca Móvil Inclusiva_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.pdf
+|   |               Plataforma de Banca Móvil Inclusiva_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS.xmp
+|   |               Plataforma de Banca Móvil Inclusiva_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.pdf
+|   |               Plataforma de Banca Móvil Inclusiva_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE.xmp
+|   |               
+|   +---rendered_pages
+|   |   +---Automatización de Procesos Internos y Reducción de Costos_MEETING_MINUTES_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos y Reducción de Costos_RFP_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos y Reducción de Costos_RFP_QA_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos y Reducción de Costos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_19.png
+|   |   |       page_2.png
+|   |   |       page_20.png
+|   |   |       page_21.png
+|   |   |       page_22.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos y Reducción de Costos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos_MEETING_MINUTES_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos_RFP_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_19.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos_RFP_QA_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Automatización de Procesos Internos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos_MEETING_MINUTES_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos_RFP_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos_RFP_QA_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Desarrollo de Plataforma Fintech para Microcréditos_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Integración de Canales Digitales y CRM Avanzado_MEETING_MINUTES_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Integración de Canales Digitales y CRM Avanzado_RFP_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Integración de Canales Digitales y CRM Avanzado_RFP_QA_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       
+|   |   +---Integración de Canales Digitales y CRM Avanzado_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_19.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Integración de Canales Digitales y CRM Avanzado_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Plataforma de Banca Móvil Inclusiva_MEETING_MINUTES_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       
+|   |   +---Plataforma de Banca Móvil Inclusiva_RFP_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Plataforma de Banca Móvil Inclusiva_RFP_QA_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       
+|   |   +---Plataforma de Banca Móvil Inclusiva_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_19.png
+|   |   |       page_2.png
+|   |   |       page_20.png
+|   |   |       page_21.png
+|   |   |       page_22.png
+|   |   |       page_23.png
+|   |   |       page_24.png
+|   |   |       page_25.png
+|   |   |       page_26.png
+|   |   |       page_27.png
+|   |   |       page_28.png
+|   |   |       page_29.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Plataforma de Banca Móvil Inclusiva_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_19.png
+|   |   |       page_2.png
+|   |   |       page_20.png
+|   |   |       page_21.png
+|   |   |       page_22.png
+|   |   |       page_23.png
+|   |   |       page_24.png
+|   |   |       page_25.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Sistema Avanzado de Detección de Fraudes_MEETING_MINUTES_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Sistema Avanzado de Detección de Fraudes_RFP_20260319
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Sistema Avanzado de Detección de Fraudes_RFP_QA_20260319
+|   |   |       page_1.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       
+|   |   +---Sistema Avanzado de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_AS-IS
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_17.png
+|   |   |       page_18.png
+|   |   |       page_19.png
+|   |   |       page_2.png
+|   |   |       page_20.png
+|   |   |       page_21.png
+|   |   |       page_22.png
+|   |   |       page_23.png
+|   |   |       page_24.png
+|   |   |       page_25.png
+|   |   |       page_26.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   +---Sistema Avanzado de Detección de Fraudes_TECHNICAL_ANNEX_20260319_Arquitectura_TO-BE
+|   |   |       page_1.png
+|   |   |       page_10.png
+|   |   |       page_11.png
+|   |   |       page_12.png
+|   |   |       page_13.png
+|   |   |       page_14.png
+|   |   |       page_15.png
+|   |   |       page_16.png
+|   |   |       page_2.png
+|   |   |       page_3.png
+|   |   |       page_4.png
+|   |   |       page_5.png
+|   |   |       page_6.png
+|   |   |       page_7.png
+|   |   |       page_8.png
+|   |   |       page_9.png
+|   |   |       
+|   |   \---Sistema de Detección de Fraudes en Tiempo Real_MEETING_MINUTES_20260319
+|   |           page_1.png
+|   |           page_10.png
+|   |           page_11.png
+|   |           page_12.png
+|   |           page_13.png
+|   |           page_14.png
+|   |           page_2.png
+|   |           page_3.png
+|   |           page_4.png
+|   |           page_5.png
+|   |           page_6.png
+|   |           page_7.png
+|   |           page_8.png
+|   |           page_9.png
+|   |           
+|   +---reports
+|   +---x
+|   |   \---x
+|   |       \---RFP
+|   |               Automatización_MEETING_MINUTES_20260319.pdf
+|   |               
+|   \---xx
+|       \---xx
+|           \---RFP
+|                   Automatización_MEETING_MINUTES_20260319.pdf
+|                   
++---scripts
+|   |   __init__.py
+|   |   
+|   +---phase_0
+|   |       seed_db.py
+|   |       
+|   +---phase_1
+|   |   |   build_general_kg.py
+|   |   |   build_master_kg.py
+|   |   |   
+|   |   \---__pycache__
+|   |           build_general_kg.cpython-313.pyc
+|   |           build_master_kg.cpython-313.pyc
+|   |           
+|   +---phase_2
+|   |   |   build_workspace.py
+|   |   |   generate_proposal.py
+|   |   |   
+|   |   \---__pycache__
+|   |           build_workspace.cpython-313.pyc
+|   |           generate_proposal.cpython-313.pyc
+|   |           
+|   +---_legacy
+|   |       buil_master_kg.py
+|   |       
+|   \---__pycache__
+|           build_general_kg.cpython-313.pyc
+|           build_master_kg.cpython-313.pyc
+|           build_workspace.cpython-313.pyc
+|           generate_proposal.cpython-313.pyc
+|           ingest_pdfs.cpython-313.pyc
+|           __init__.cpython-313.pyc
+|           
++---src
+|   |   exceptions.py
+|   |   logger.py
+|   |   __init__.py
+|   |   
+|   +---phase_0
+|   |   |   __init__.py
+|   |   |   
+|   |   +---database
+|   |   |   |   models.py
+|   |   |   |   repository.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           models.cpython-313.pyc
+|   |   |           repository.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---formatting
+|   |   |   |   renderer.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           renderer.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---ingestion
+|   |   |   |   chunking.py
+|   |   |   |   cleaner.py
+|   |   |   |   document_classifier.py
+|   |   |   |   entity_extractor.py
+|   |   |   |   ocr.py
+|   |   |   |   pdf_reader.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           chunking.cpython-313.pyc
+|   |   |           cleaner.cpython-313.pyc
+|   |   |           document_classifier.cpython-313.pyc
+|   |   |           entity_extractor.cpython-313.pyc
+|   |   |           pdf_reader.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---llm
+|   |   |   |   anthropic_client.py
+|   |   |   |   base.py
+|   |   |   |   factory.py
+|   |   |   |   openai_client.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           anthropic_client.cpython-313.pyc
+|   |   |           base.cpython-313.pyc
+|   |   |           factory.cpython-313.pyc
+|   |   |           openai_client.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---models
+|   |   |   |   entities.py
+|   |   |   |   schemas.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           entities.cpython-313.pyc
+|   |   |           schemas.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---workflow
+|   |   |   |   generator.py
+|   |   |   |   graph.py
+|   |   |   |   nodes.py
+|   |   |   |   state.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           generator.cpython-313.pyc
+|   |   |           graph.cpython-313.pyc
+|   |   |           nodes.cpython-313.pyc
+|   |   |           state.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---phase_1
+|   |   +---database
+|   |   |       repository.py
+|   |   |       
+|   |   +---document_kg
+|   |   |   |   chunk_loader.py
+|   |   |   |   loader.py
+|   |   |   |   multimodal_chunker.py
+|   |   |   |   multimodal_loader.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           chunk_loader.cpython-313.pyc
+|   |   |           multimodal_chunker.cpython-313.pyc
+|   |   |           multimodal_loader.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---graph
+|   |   |   |   connection.py
+|   |   |   |   schema.cypher
+|   |   |   |   schema_loader.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           chunk_loader.cpython-313.pyc
+|   |   |           connection.cpython-313.pyc
+|   |   |           loader.cpython-313.pyc
+|   |   |           retrieval.cpython-313.pyc
+|   |   |           schema_loader.cpython-313.pyc
+|   |   |           workspace_loader.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---master_kg
+|   |           __init__.py
+|   |           
+|   +---phase_2
+|   |   +---embeddings
+|   |   |   |   embedder.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           embedder.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---orchestration
+|   |   |   |   experts.py
+|   |   |   |   gemini_multimodal.py
+|   |   |   |   proposal_generator.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           experts.cpython-313.pyc
+|   |   |           gemini_multimodal.cpython-313.pyc
+|   |   |           proposal_generator.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---retrieval
+|   |   |   |   retrieval.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           retrieval.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---workspace
+|   |       |   workspace_loader.py
+|   |       |   __init__.py
+|   |       |   
+|   |       \---__pycache__
+|   |               workspace_loader.cpython-313.pyc
+|   |               __init__.cpython-313.pyc
+|   |               
+|   \---__pycache__
+|           exceptions.cpython-313.pyc
+|           logger.cpython-313.pyc
+|           __init__.cpython-313.pyc
+|           
++---tests
+|       test_database.py
+|       test_models.py
+|       test_workflow.py
+|       __init__.py
+|       
+\---__pycache__
+        generate_main.cpython-313.pyc
+        graph_main.cpython-313.pyc
+        

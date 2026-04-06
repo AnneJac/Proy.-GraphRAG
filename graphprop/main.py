@@ -1,0 +1,256 @@
+"""
+Synthetic Document Factory — CLI Entrypoint.
+
+Provides a command-line interface to trigger the full document
+generation pipeline (seed data → skeleton → prose → PDF).
+
+Usage:
+    python main.py --doc-type rfp --project-id PRJ-001 --count 1
+    python main.py --doc-type project_history --project-id PRJ-004 --count 3
+"""
+
+import sys
+from pathlib import Path
+
+_project_root = Path(__file__).resolve().parent
+if str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
+
+import typer
+from rich.console import Console
+from rich.panel import Panel
+from rich.progress import Progress, SpinnerColumn, TextColumn
+
+from config.settings import settings
+from src.exceptions import SDFError
+from src.phase_0.formatting.renderer import PDFRenderer
+from src.logger import setup_logger
+from src.phase_0.workflow.generator import DocumentGenerator
+
+logger = setup_logger("generate_cli")
+console = Console()
+
+app = typer.Typer(
+    help="PDF generation commands",
+    invoke_without_command=True,
+)
+
+
+@app.callback()
+def generate(
+    ctx: typer.Context,
+    doc_type: str = typer.Option(
+        None,
+        "--doc-type",
+        "-t",
+        help="Document type: rfp, project_history, meeting_minutes",
+    ),
+    project_id: str = typer.Option(
+        None,
+        "--project-id",
+        "-p",
+        help="Seed project ID (e.g. PRJ-001)",
+    ),
+    count: int = typer.Option(
+        1,
+        "--count",
+        "-n",
+        help="Number of documents to generate",
+        min=1,
+        max=100,
+    ),
+    output_dir: str = typer.Option(
+        None,
+        "--output-dir",
+        "-o",
+        help="Output directory for PDFs (defaults to output/)",
+    ),
+) -> None:
+    # Si se llamó un subcomando como seed o list-projects, no ejecutar generación
+    if ctx.invoked_subcommand is not None:
+        return
+
+    if not doc_type or not project_id:
+        raise typer.BadParameter("Debes enviar --doc-type y --project-id")
+
+    console.print(Panel(
+        f"[bold blue]Synthetic Document Factory[/bold blue]\n"
+        f"Type: [cyan]{doc_type}[/cyan] | "
+        f"Project: [cyan]{project_id}[/cyan] | "
+        f"Count: [cyan]{count}[/cyan]",
+        title="SDF Generation",
+        border_style="blue",
+    ))
+
+    valid_types = ["rfp", "project_history", "meeting_minutes", "technical_annex", "rfp_qa"]
+    if doc_type not in valid_types:
+        console.print(
+            f"[red]Error:[/red] Invalid doc-type '{doc_type}'. "
+            f"Valid types: {', '.join(valid_types)}"
+        )
+        raise typer.Exit(code=1)
+
+    out_path = Path(output_dir) if output_dir else settings.OUTPUT_DIR
+    out_path.mkdir(parents=True, exist_ok=True)
+
+    generator = DocumentGenerator()
+    renderer = PDFRenderer(output_dir=out_path)
+
+    generated_files: list[Path] = []
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        console=console,
+    ) as progress:
+        for i in range(1, count + 1):
+            task = progress.add_task(
+                f"Generating {doc_type} {i}/{count}...", total=None
+            )
+
+            try:
+                result = generator.generate(
+                    project_id=project_id,
+                    doc_type=doc_type,
+                )
+
+                final_md = (result.get("final_markdown") or "").strip()
+                if not final_md:
+                    console.print(f"[yellow]Warning:[/yellow] No content generated for document {i}")
+                    progress.update(task, description=f"[yellow]Skipped {i}/{count}[/yellow]")
+                    continue
+
+                project_data = result.get("project", {})
+
+                from src.phase_0.database.models import get_session
+                from src.phase_0.database.repository import get_bank_by_id, get_project_by_id
+
+                b_name = project_data.get("bank_id", "UnknownBank")
+                p_name = project_data.get("project_id", project_id)
+
+                session = get_session()
+                try:
+                    p_obj = get_project_by_id(session, project_id)
+                    if p_obj:
+                        p_name = p_obj.name
+                        b_obj = get_bank_by_id(session, p_obj.bank_id)
+                        if b_obj:
+                            b_name = b_obj.name
+                finally:
+                    session.close()
+
+                import re
+
+                def _sanitize(name: str) -> str:
+                    return re.sub(r'[\\/*?:"<>|]', "", name).strip()
+
+                specific_out = out_path / _sanitize(b_name) / _sanitize(p_name) / "RFP"
+                specific_out.mkdir(parents=True, exist_ok=True)
+                renderer.output_dir = specific_out
+
+                skeleton = result.get("skeleton", {})
+                xmp_metadata = {
+                    "title": skeleton.get("metadata", {}).get("title", f"{doc_type}_{project_id}"),
+                    "document_type": doc_type,
+                    "project_id": project_id,
+                    "bank_id": project_data.get("bank_id", ""),
+                    "stakeholder_ids": project_data.get("stakeholder_ids", []),
+                }
+
+                from datetime import datetime
+                ts = datetime.now().strftime("%Y%m%d")
+                base_filename = f"{_sanitize(p_name)}_{doc_type.upper()}_{ts}"
+                if count > 1:
+                    base_filename += f"_{i:03d}"
+
+                split_pattern = r"===SPLIT_MARKER:(.*?)==="
+                parts = re.split(split_pattern, final_md)
+
+                if len(parts) > 1:
+                    start_idx = 1 if not parts[0].strip() else 0
+
+                    for j in range(start_idx, len(parts), 2):
+                        if j + 1 >= len(parts):
+                            break
+
+                        suffix = parts[j].strip()
+                        content = parts[j + 1].strip()
+                        if not content:
+                            continue
+
+                        safe_suffix = _sanitize(suffix).replace(" ", "_")
+                        sub_filename = f"{base_filename}_{safe_suffix}"
+
+                        sub_metadata = xmp_metadata.copy()
+                        sub_metadata["title"] = f"{xmp_metadata['title']} - {suffix}"
+
+                        pdf_path = renderer.render(
+                            markdown=content,
+                            filename=sub_filename,
+                            metadata=sub_metadata,
+                        )
+                        generated_files.append(pdf_path)
+                else:
+                    pdf_path = renderer.render(
+                        markdown=final_md,
+                        filename=base_filename,
+                        metadata=xmp_metadata,
+                    )
+                    generated_files.append(pdf_path)
+
+                usage = result.get("token_usage", {})
+                progress.update(
+                    task,
+                    description=(
+                        f"[green]Done {i}/{count}[/green] — "
+                        f"{usage.get('total_tokens', 0)} tokens"
+                    ),
+                )
+
+            except SDFError as exc:
+                console.print(f"[red]Error generating document {i}:[/red] {exc}")
+                logger.exception("Document generation failed: %s", exc)
+                progress.update(task, description=f"[red]Failed {i}/{count}[/red]")
+
+    console.print()
+    if generated_files:
+        console.print(Panel(
+            "\n".join(f"  [green]✓[/green] {f.name}" for f in generated_files),
+            title=f"[bold green]{len(generated_files)} Document(s) Generated[/bold green]",
+            border_style="green",
+        ))
+        console.print(f"Output directory: [cyan]{out_path.resolve()}[/cyan]")
+    else:
+        console.print("[yellow]No documents were generated.[/yellow]")
+
+
+@app.command("seed")
+def seed() -> None:
+    console.print("[blue]Seeding database...[/blue]")
+    from scripts.phase_0.seed_db import seed_database
+    seed_database()
+    console.print("[green]Database seeded successfully.[/green]")
+
+
+@app.command("list-projects")
+def list_projects() -> None:
+    from src.phase_0.database.models import get_session
+    from src.phase_0.database.repository import get_all_projects
+
+    session = get_session()
+    try:
+        projects = get_all_projects(session)
+        if not projects:
+            console.print("[yellow]No projects found. Run 'python main.py generate seed' first.[/yellow]")
+            return
+
+        console.print(Panel("[bold]Seed Projects[/bold]", border_style="blue"))
+        for p in projects:
+            console.print(
+                f"  [cyan]{p.project_id}[/cyan] | "
+                f"{p.name} | "
+                f"[dim]{p.status.value}[/dim] | "
+                f"Bank: {p.bank_id}"
+            )
+    finally:
+        session.close()
